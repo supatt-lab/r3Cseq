@@ -1,0 +1,31 @@
+Version 1.29.0: (2018-12-08)
+- migrated all codes to support the BioC3.9! This is because the BioC3.9 will not anymore support the 'RangedData' which is mainly used by r3Cseq in the previous versions.
+
+version 1.13.1: (2015-01-26)
+- fixed the bugs in function "export3Cseq2bedGraph"
+- fixed the bugs in function "getViewpoint"
+- fixed the bugs in function "export3CseqRawReads2bedGraph"
+- added "mm10" and "rn5" genomes into the package
+
+version 1.9.2: (2013-11-11)
+
+- fixed the bugs in function getFragmentsPerWindow for "overlapping window"
+
+version 1.9.1: (2013-10-21)
+- added the yLim input parameter of plotInteractionsNearViewpoint
+- added the log2 cutoff ratio for the function plotInteractionsNearViewpoint
+- fixed the shift of interaction in the viewpoint chromosome found in the function getFragmentsPerWindow
+- fixed the missing input parameter for the function getBatchReadCountPerWindow
+- fixed the class of r3CseqInBatch
+
+version 1.5.0: (2012-10-25)
+- added the new normalization method of 3C-seq analysis
+- added the new statistical analysis for identification of 3C-seq interaction regions
+- added the analysis for both restriction fragment and a user defined non-overlapping window
+- added the analysis for 3C-seq data with replicates
+- added the new visualization "domainograms"
+- updated the existing plots
+- update the exported methods
+- added the options for counting reads per regions
+- fixed the bug of counting reads per regions
+- updated the vignette

@@ -10,6 +10,9 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 BiocManager::install("r3Cseq")
 ```
+# Important update
+The BioC3.9 in R3.6 will not anymore support the _RangedData_ which is mainly used by r3Cseq in previous versions. 
+This version of r3Cseq (version 1.29.0) therefore has migrated codes to use the GRanges to support BioC3.9 in R3.6.  
 
 # Documentation
 

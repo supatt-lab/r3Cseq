@@ -17,4 +17,4 @@ devtools::install_github("supatt/r3Cseq")
 ```
 # Documentation
 
-The documentation for the version of this package can be found in 
+The documentation for the version of this package can be found in https://github.com/supatt/r3Cseq/blob/master/vignettes folder. How to use to package is also described on http://r3cseq.genereg.net/Site/index.html.

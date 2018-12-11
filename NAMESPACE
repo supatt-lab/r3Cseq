@@ -7,8 +7,6 @@ importMethodsFrom(GenomeInfoDb, seqlengths, "seqlengths<-",
 	"seqlevels<-")
 
 importFrom(RColorBrewer, brewer.pal)
-importFrom(base, lengths)
-
 importFrom(Rsamtools, scanBamFlag)
 importMethodsFrom(Rsamtools, scanBam, ScanBamParam)
 

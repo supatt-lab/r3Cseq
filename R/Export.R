@@ -21,7 +21,7 @@ setMethod("export3CseqRawReads2bedGraph",
 				expLabeled<-expLabel(object)	
 				orgName  <- organismName(object)
 				
-				if(length(expRawReads.GRanges)>0){	
+				if(base::length(expRawReads.GRanges)>0){	
 					print("making coverage vector......")
 					exp.read.cov      <- RleList()
 					#***Fix the error in this version by changing from RangeData to GRanges
@@ -45,7 +45,7 @@ setMethod("export3CseqRawReads2bedGraph",
 				
 				orgName  <- organismName(object)
 				
-				if(length(expRawReads.GRanges)>0){	
+				if(base::length(expRawReads.GRanges)>0){	
 					print("making coverage vector......")
 					exp.read.cov      <- RleList()
 					contr.read.cov      <- RleList()
@@ -97,7 +97,7 @@ setMethod("export3Cseq2bedGraph",
 				expLabeled<-expLabel(object)
 				
 				if(datatype=="rpm"){	
-					if(length(expRPMs)>0){
+					if(base::length(expRPMs)>0){
 						##Fix export.f by adding "as.character"
 						export.f <-data.frame(seqnames=as.character(seqnames(expRPMs)),start=start(expRPMs),end=end(expRPMs),score=expRPMs$RPMs)
 						export.GRanges<-GRanges(seqnames=export.f$seqnames,IRanges(start=export.f$start,end=export.f$end),score=export.f$score)
@@ -112,7 +112,7 @@ setMethod("export3Cseq2bedGraph",
 						stop("No RPM found in the r3Cseq object, you have to run the function 'getReadCountPerRestrictionFragment' following by the function 'calculateRPM'.")	
 					}
 				}else if(datatype=="read_count"){
-					if(length(expRPMs)>0){
+					if(base::length(expRPMs)>0){
 						export.f <-data.frame(seqnames=as.character(seqnames(expRPMs)),start=start(expRPMs),end=end(expRPMs),score=expRPMs$nReads)
 						export.GRanges<-GRanges(seqnames=export.f$seqnames,IRanges(start=export.f$start,end=export.f$end),score=export.f$score)
 						#export.iranges<-export.iranges[export.iranges$score>0,]
@@ -138,7 +138,7 @@ setMethod("export3Cseq2bedGraph",
 				
 				if(datatype=="rpm"){
 
-					if(length(expRPMs)>0){
+					if(base::length(expRPMs)>0){
 						export.GRanges<-GRanges(seqnames =as.character(seqnames(expRPMs)),IRanges(start=start(expRPMs),end=end(expRPMs)),score=expRPMs$RPMs)
 						#export.iranges<-export.iranges[export.iranges$score>0,]
 						export.GRanges<-export.GRanges[export.GRanges$score>0,]
@@ -162,7 +162,7 @@ setMethod("export3Cseq2bedGraph",
 						stop("No RPM found in the r3Cseq object, you have to run the function 'getReadCountPerRestrictionFragment' following by the function 'calculateRPM'.")	
 					}
 				}else if(datatype=="read_count"){
-					if(length(expRPMs)>0){
+					if(base::length(expRPMs)>0){
 					  export.GRanges<-GRanges(seqnames=as.character(seqnames(expRPMs)),IRanges(start=start(expRPMs),end=end(expRPMs)),score=expRPMs$nReads)
 						#export.iranges<-export.iranges[export.iranges$score>0,]
 					  export.GRanges<-export.GRanges[export.GRanges$score>0,]
@@ -208,7 +208,7 @@ setMethod("exportInteractions2text",
 				expInteractions<-expInteractionRegions(object)
 				expLabeled<-expLabel(object)
 				
-					if(length(expInteractions)>0){
+					if(base::length(expInteractions)>0){
 						
 						file_name<-paste(expLabeled,".interaction.txt",sep="")
 						export.data<-data.frame(chromosome=seqnames(expInteractions),
@@ -230,7 +230,7 @@ setMethod("exportInteractions2text",
 				expLabeled<-expLabel(object)
 				controlLabeled<-contrLabel(object)
 				
-				if(length(expInteractions)>0){
+				if(base::length(expInteractions)>0){
 					
 					file_name<-paste(expLabeled,".interaction.txt",sep="")
 					export.data<-data.frame(chromosome=seqnames(expInteractions),
@@ -246,7 +246,7 @@ setMethod("exportInteractions2text",
 					stop("No interaction regions found in the r3Cseq object, you have to run the r3Cseq pipeline.")	
 				}
 				
-				if(length(contrInteractions)>0){
+				if(base::length(contrInteractions)>0){
 					
 					file_name<-paste(controlLabeled,".interaction.txt",sep="")
 					export.data<-data.frame(chromosome=seqnames(contrInteractions),
@@ -283,7 +283,7 @@ setMethod("exportBatchInteractions2text",
 				expInteractions  <-expInteractionRegions(object)
 				contrInteractions <- contrInteractionRegions(object)
 				
-				if(length(expInteractions)>0){
+				if(base::length(expInteractions)>0){
 					
 					file_name<-"Batch.experiment.interaction.txt"
 					export.data<-data.frame(chromosome=seqnames(expInteractions),
@@ -299,7 +299,7 @@ setMethod("exportBatchInteractions2text",
 					stop("No interaction regions found in the r3Cseq object, you have to run the r3Cseq pipeline.")	
 				}
 				
-				if(length(contrInteractions)>0){
+				if(base::length(contrInteractions)>0){
 					
 					file_name<-"Batch.control.interaction.txt"
 					export.data<-data.frame(chromosome=seqnames(contrInteractions),

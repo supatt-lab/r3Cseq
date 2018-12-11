@@ -2,7 +2,7 @@ Package: r3Cseq
 Version: 1.29.0
 Title: Analysis of Chromosome Conformation Capture and Next-generation
         Sequencing (3C-seq)
-Author: Supat Thongjuea, MRC Molecular Haematology Unit, Weatherall
+Author: Supat Thongjuea, MRC WIMM Centre for Computational Biology, Weatherall
         Institute of Molecular Medicine, University of Oxford, UK
         <supat.thongjuea@imm.ox.ac.uk> or <supat.thongjuea@gmail.com>
 Maintainer: Supat Thongjuea <supat.thongjuea@imm.ox.ac.uk> or <supat.thongjuea@gmail.com>

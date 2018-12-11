@@ -10,11 +10,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 BiocManager::install("r3Cseq")
 ```
-It can be also installed directly from github :
-```{r, eval = F}
-# install.packages("devtools")
-devtools::install_github("supatt/r3Cseq")
-```
+
 # Documentation
 
 The documentation for the version of this package can be found in https://github.com/supatt/r3Cseq/blob/master/vignettes folder. How to use to package is also described on http://r3cseq.genereg.net/Site/index.html.

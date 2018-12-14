@@ -13,7 +13,7 @@ BiocManager::install("r3Cseq")
 It can be also installed directly from the developer's GitHub :
 ```{r, eval = F}
 library(devtools)
-install_github("supatt/r3Cseq")
+install_github("supatt-lab/r3Cseq")
 ```
 
 # Important update
